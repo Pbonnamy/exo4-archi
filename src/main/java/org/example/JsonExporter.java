@@ -8,8 +8,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class JsonExporter implements Exporter {
-    private String filename;
-    private TodoList todoList;
+    private final String filename;
+    private final TodoList todoList;
 
     public JsonExporter(String filename, TodoList todoList) {
         this.filename = filename;
@@ -27,9 +27,8 @@ public class JsonExporter implements Exporter {
 
             jsonArray.add(jsonObject);
         }
-        System.out.println(jsonArray.toJSONString());
-        try {
 
+        try {
             FileWriter file = new FileWriter(filename, false);
             file.write(jsonArray.toJSONString());
             file.close();

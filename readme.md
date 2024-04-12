@@ -1,7 +1,7 @@
 ### Display todo list
 
 ```
-display
+list
 ```
 
 ### Add todo
