@@ -1,6 +1,7 @@
-package org.example;
+package org.example.model;
 
 import static org.junit.Assert.*;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,16 +17,15 @@ public class TodoListTest {
         todoList = new TodoList(new ArrayList<>());
     }
 
-
     @Test
-    public void add() {
+    public void testAdd() {
         Todo todo = new Todo("Test todo");
         todoList.add(todo);
         assertTrue(todoList.getTodos().contains(todo));
     }
 
     @Test
-    public void remove() {
+    public void testRemove() {
         Todo todo = new Todo("Test todo");
         todoList.add(todo);
         todoList.remove(0);
@@ -33,7 +33,7 @@ public class TodoListTest {
     }
 
     @Test
-    public void markAsDone() {
+    public void testMarkAsDone() {
         Todo todo = new Todo("test todo");
         todoList.add(todo);
         todoList.markAsDone(0);
@@ -46,7 +46,7 @@ public class TodoListTest {
     }
 
     @Test
-    public void getTodos() {
+    public void testGetTodos() {
         List<Todo> todos = new ArrayList<>();
         Todo todo1 = new Todo("Test todo");
         Todo todo2 = new Todo("Test todo 2");

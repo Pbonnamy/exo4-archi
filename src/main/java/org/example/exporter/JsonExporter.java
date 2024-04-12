@@ -1,6 +1,8 @@
-package org.example;
+package org.example.exporter;
 
 
+import org.example.model.Todo;
+import org.example.model.TodoList;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 

@@ -1,4 +1,7 @@
-package org.example;
+package org.example.exporter;
+
+import org.example.model.Todo;
+import org.example.model.TodoList;
 
 import java.util.Date;
 
