@@ -15,10 +15,10 @@ public class Main {
                 consoleExporter.export();
                 break;
             case REMOVE:
-                todoList.remove(Integer.parseInt(args[1]));
+                todoList.remove(Integer.parseInt(args[1]) - 1);
                 break;
             case DONE:
-                todoList.markAsDone(Integer.parseInt(args[1]));
+                todoList.markAsDone(Integer.parseInt(args[1]) - 1);
                 break;
             case null:
                 break;
