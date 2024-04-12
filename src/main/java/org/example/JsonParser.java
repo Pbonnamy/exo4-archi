@@ -19,12 +19,12 @@ public class JsonParser implements Parser {
         this.filename = filename;
     }
 
-    public List<Todo> parse() {
+    public TodoList parse() {
         List<Todo> todos = new ArrayList<>();
 
         try {
             if (!new File(filename).exists()) {
-                return todos;
+                return new TodoList(todos);
             }
 
             FileReader reader = new FileReader(filename);
@@ -42,6 +42,6 @@ public class JsonParser implements Parser {
             e.printStackTrace();
         }
 
-        return todos;
+        return new TodoList(todos);
     }
 }

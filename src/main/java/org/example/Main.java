@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         String filename = "todos.json";
         Parser jsonParser = new JsonParser(filename);
-        TodoList todoList = new TodoList(jsonParser.parse());
+        TodoList todoList = jsonParser.parse();
 
         switch (Action.fromString(args[0])) {
             case ADD:
