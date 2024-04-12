@@ -1,30 +1,17 @@
 package org.example;
 
+import org.example.actions.*;
+
 public class Main {
     public static void main(String[] args) {
         String filename = "todos.json";
         Parser jsonParser = new JsonParser(filename);
         TodoList todoList = jsonParser.parse();
 
-        switch (Action.fromString(args[0])) {
-            case ADD:
-                todoList.add(new Todo(args[1]));
-                break;
-            case LIST:
-                Exporter consoleExporter = new ConsoleExporter(todoList);
-                consoleExporter.export();
-                break;
-            case REMOVE:
-                todoList.remove(Integer.parseInt(args[1]) - 1);
-                break;
-            case DONE:
-                todoList.markAsDone(Integer.parseInt(args[1]) - 1);
-                break;
-            case null:
-                break;
-        }
+        ActionType actionType = ActionType.fromString(args[0]);
 
-        Exporter jsonExporter = new JsonExporter(filename, todoList);
-        jsonExporter.export();
+        String[] actionArgs = new String[args.length - 1];
+        ActionHandler actionHandler = new ActionHandler();
+        actionHandler.handle(actionType, todoList, filename, actionArgs);
     }
 }

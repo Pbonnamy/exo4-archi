@@ -1,6 +1,6 @@
 package org.example;
 
-public enum Action {
+public enum ActionType {
     ADD("add"),
     LIST("list"),
     REMOVE("remove"),
@@ -8,7 +8,7 @@ public enum Action {
 
     private final String action;
 
-    Action(String action) {
+    ActionType(String action) {
         this.action = action;
     }
 
@@ -16,10 +16,10 @@ public enum Action {
         return action;
     }
 
-    public static Action fromString(String text) {
-        for (Action action : Action.values()) {
-            if (action.action.equalsIgnoreCase(text)) {
-                return action;
+    public static ActionType fromString(String text) {
+        for (ActionType actionType : ActionType.values()) {
+            if (actionType.action.equalsIgnoreCase(text)) {
+                return actionType;
             }
         }
         return null;
