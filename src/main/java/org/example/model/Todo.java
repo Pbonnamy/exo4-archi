@@ -3,8 +3,8 @@ package org.example.model;
 import java.util.Date;
 
 public class Todo {
-    private Date date;
-    private String text;
+    private final Date date;
+    private final String text;
     private boolean done;
 
     public Todo(String text) {
@@ -23,16 +23,8 @@ public class Todo {
         return date;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
     public String getText() {
         return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
     }
 
     public boolean isDone() {

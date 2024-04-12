@@ -12,10 +12,6 @@ public enum Action {
         this.action = action;
     }
 
-    public String getAction() {
-        return action;
-    }
-
     public static Action fromString(String text) {
         for (Action action : Action.values()) {
             if (action.action.equalsIgnoreCase(text)) {
