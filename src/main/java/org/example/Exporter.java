@@ -1,5 +1,5 @@
 package org.example;
 
 public interface Exporter {
-    void export();
+    void export(TodoList todoList);
 }

@@ -9,14 +9,12 @@ import java.io.IOException;
 
 public class JsonExporter implements Exporter {
     private final String filename;
-    private final TodoList todoList;
 
-    public JsonExporter(String filename, TodoList todoList) {
+    public JsonExporter(String filename) {
         this.filename = filename;
-        this.todoList = todoList;
     }
 
-    public void export() {
+    public void export(TodoList todoList) {
         JSONArray jsonArray = new JSONArray();
 
         for (Todo todo : todoList.getTodos()) {

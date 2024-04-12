@@ -4,13 +4,7 @@ import java.util.Date;
 
 public class ConsoleExporter implements Exporter {
 
-    private final TodoList todoList;
-
-    public ConsoleExporter(TodoList todoList) {
-        this.todoList = todoList;
-    }
-
-    public void export() {
+    public void export(TodoList todoList) {
         for (int i = 0; i < todoList.getTodos().size(); i++) {
             Todo todo = todoList.getTodos().get(i);
 
