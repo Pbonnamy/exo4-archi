@@ -20,4 +20,8 @@ public class TodoList {
     public void markAsDone(int index) {
         todos.get(index).setDone(true);
     }
+
+    public List<Todo> getTodos() {
+        return todos;
+    }
 }
