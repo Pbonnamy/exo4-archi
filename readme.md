@@ -7,7 +7,7 @@ list
 ### Add todo
 
 ```
-add <todo text>
+add "<todo text>"
 ```
 
 ### Remove todo
