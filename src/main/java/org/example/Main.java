@@ -36,7 +36,7 @@ public class Main {
                 todoList.markAsDone(Integer.parseInt(args[1]) - 1);
                 jsonExporter.export(todoList);
                 break;
-            case EXPORT:
+            case REPORT:
                 reportExporter.export(todoList);
                 break;
             case null:

@@ -19,7 +19,7 @@ public class ConsoleExporter implements Exporter {
         }
     }
 
-    public String formatDate(Date date) {
+    private String formatDate(Date date) {
         long diff = Math.abs(date.getTime() - new Date().getTime());
         long diffSeconds = diff / 1000 % 60;
         long diffMinutes = diff / (60 * 1000) % 60;

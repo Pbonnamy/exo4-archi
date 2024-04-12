@@ -5,7 +5,7 @@ public enum Action {
     LIST("list"),
     REMOVE("remove"),
     DONE("done"),
-    EXPORT("export");
+    REPORT("report");
 
     private final String action;
 
